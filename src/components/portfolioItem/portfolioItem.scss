@@ -1,0 +1,47 @@
+@import "../../assets/style/variables";
+
+.cardItem{
+  position: relative;
+  overflow-x: hidden;
+  border: 1px solid $textColor;
+
+  .react{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    color: rgb(0, 209, 247);
+    background-color: black;
+    border-radius: 10px;
+    font-size: 30px;
+    padding: 5px 10px;
+    box-shadow: 0 0 20px 5px rgb(0, 209, 247);
+  }
+
+  .onHover{
+    position: absolute;
+    top: -100%;
+    width: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    padding: 40px;
+    transition: .3s linear;
+
+    .technologies{
+      margin-bottom: 20px;
+      .technologies__items .technologies__item{
+        margin-right: 15px;
+      }
+    }
+    a{
+      width: fit-content;
+    }
+  }
+
+  &:hover{
+    .onHover{
+      top: 0;
+      transition: .3s linear;
+    }
+  }
+}

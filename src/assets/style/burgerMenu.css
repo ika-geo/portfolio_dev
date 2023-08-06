@@ -1,0 +1,52 @@
+.burgerMenu {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .burgerMenu {
+    position: fixed;
+    display: block;
+    top: 45px;
+    right: 30px;
+    width: 50px;
+    height: 23px;
+    z-index: 500;
+  }
+  .burgerMenu .burgerStick, .burgerMenu:before, .burgerMenu:after {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #cccccc;
+  }
+  .burgerMenu .burgerStick {
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    transition-duration: 0.3s;
+  }
+  .burgerMenu:before {
+    content: "";
+    top: 0;
+    transition-duration: 0.3s;
+  }
+  .burgerMenu:after {
+    content: "";
+    bottom: 0;
+    transition-duration: 0.3s;
+  }
+  .burgerMenu.active .burgerStick {
+    opacity: 0;
+    transition-duration: 0.3s;
+  }
+  .burgerMenu.active:before {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    transition-duration: 0.3s;
+  }
+  .burgerMenu.active:after {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    transition-duration: 0.3s;
+  }
+}
+
+/*# sourceMappingURL=burgerMenu.css.map */

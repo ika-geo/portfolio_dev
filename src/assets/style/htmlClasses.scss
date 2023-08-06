@@ -1,0 +1,117 @@
+@import "variables";
+
+.block{
+  position: relative;
+  padding: 60px 0;
+  @media screen and (max-width: 768px){
+    padding: 40px 0;
+  }
+  @media screen and (max-width: 450px){
+    padding: 30px 0;
+  }
+}
+
+
+.center{
+  text-align: center;
+}
+
+.title{
+  font-family: $fontFamily;
+  font-weight: 800;
+  font-size: 45px;
+  margin-bottom: 60px;
+  text-align: center;
+  @media screen and (max-width: 768px){
+    font-size: 35px;
+    margin-bottom: 25px!important;
+  }
+}
+
+
+.subTitle{
+  font-family: $fontFamily;
+  font-weight: 700;
+  font-size: 24px;
+  opacity: 0.7;
+  margin-bottom: 20px;
+  @media screen and (max-width: 768px){
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  @media screen and (max-width: 450px){
+    font-size: 20px;
+  }
+}
+
+.text{
+  font-family: $fontFamily;
+  font-weight: 400;
+  font-size: 18px;
+  color: $textColor;
+  margin-bottom: 15px;
+  @media screen and (max-width: 768px){
+    font-size: 16px;
+  }
+  @media screen and (max-width: 450px){
+    font-size: 15px;
+  }
+}
+
+.coloredText1{
+  color: $mainColor;
+}
+
+.coloredText2{
+  color: $secondColor;
+}
+
+
+
+.grid2{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  @media screen and (max-width: 768px){
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.grid4{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-content: space-evenly;
+  @media screen and (max-width: 1200px){
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (max-width: 768px){
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 450px){
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@mixin flex{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flex{
+  @include flex;
+}
+
+.flexBetween{
+  @include flex;
+  justify-content: space-between;
+}
+
+.flexEvenly{
+  @include flex;
+  justify-content: space-evenly;
+}

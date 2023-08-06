@@ -1,0 +1,74 @@
+.bgBallHandle {
+  margin: 0 0 15px auto;
+  width: fit-content;
+  /* Hide the default checkbox */
+  /* Create a custom checkbox */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+@media screen and (max-width: 768px) {
+  .bgBallHandle {
+    display: none;
+  }
+  .bgBallHandle.active {
+    display: flex !important;
+    position: fixed;
+    top: 100px;
+    right: 30px;
+    z-index: 500;
+  }
+}
+@media screen and (max-width: 768px) {
+  .bgBallHandle {
+    display: none !important;
+  }
+}
+.bgBallHandle .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.bgBallHandle .container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 15px;
+  user-select: none;
+  margin-right: 15px;
+}
+.bgBallHandle .checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+  background: #606062;
+  border-radius: 7px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+.bgBallHandle .container input:checked ~ .checkmark {
+  background-color: #32ab32;
+}
+.bgBallHandle .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.bgBallHandle .container input:checked ~ .checkmark:after {
+  display: block;
+}
+.bgBallHandle .container .checkmark:after {
+  left: 0.45em;
+  top: 0.2em;
+  width: 0.24em;
+  height: 0.6em;
+  border: solid white;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+
+/*# sourceMappingURL=bgBallHandle.css.map */

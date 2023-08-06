@@ -1,0 +1,20 @@
+
+.strengths__block {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+
+  .title{
+    margin-bottom: 30px;
+    font-size: 38px;
+  }
+
+  li {
+    letter-spacing: 0.05px;
+  }
+
+  p{
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+}

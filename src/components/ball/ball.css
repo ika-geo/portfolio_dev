@@ -1,0 +1,23 @@
+.container.ball .ball {
+  position: absolute;
+  max-width: 100%;
+  width: 768px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  z-index: -1;
+}
+.container.ball .ball.center {
+  transform: translateX(-50%) translateY(-50%);
+}
+.container.ball .ball.centerX {
+  transform: translateX(-50%);
+}
+@media screen and (max-width: 800px) {
+  .container.ball .ball {
+    width: 100%;
+    opacity: 0.8 !important;
+    height: 400px !important;
+  }
+}
+
+/*# sourceMappingURL=ball.css.map */

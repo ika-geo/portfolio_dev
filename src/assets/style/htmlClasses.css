@@ -1,0 +1,126 @@
+.block {
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 768px) {
+  .block {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .block {
+    margin-bottom: 30px;
+  }
+}
+
+.title {
+  font-family: "arial", "sans-serif";
+  font-weight: 800;
+  font-size: 32px;
+  color: red;
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 768px) {
+  .title {
+    margin-bottom: 15px;
+  }
+}
+
+.subTitle {
+  font-family: "arial", "sans-serif";
+  font-weight: 700;
+  font-size: 24px;
+  color: red;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .subTitle {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .subTitle {
+    font-size: 20px;
+  }
+}
+
+.text {
+  font-family: "arial", "sans-serif";
+  font-weight: 400;
+  font-size: 18px;
+  color: #830808;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 768px) {
+  .text {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .text {
+    font-size: 15px;
+  }
+}
+
+.coloredText {
+  font-family: "arial", "sans-serif";
+  font-weight: 800;
+  font-size: 24px;
+  color: yellow;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  .coloredText {
+    margin-bottom: 12px;
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .coloredText {
+    font-size: 20px;
+  }
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: space-evenly;
+}
+@media screen and (max-width: 768px) {
+  .grid2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.grid4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-content: space-evenly;
+}
+@media screen and (max-width: 1200px) {
+  .grid4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .grid4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 450px) {
+  .grid4 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+/*# sourceMappingURL=htmlClasses.css.map */

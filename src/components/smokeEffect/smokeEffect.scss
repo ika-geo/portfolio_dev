@@ -1,0 +1,90 @@
+$cyrclePosition: 50px;
+$cyrcleWidth: 400px;
+@media screen and (max-width: 450px){
+  $cyrcleWidth: 280px;
+}
+$cyrcleBlur: 50px;
+$cyrcleBorderWidth: 20px;
+
+.circleRing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .circleBlock {
+    position: relative;
+
+    .circleText {
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .circle {
+    position: relative;
+    width: $cyrcleWidth;
+    filter: url(#wavy) blur(1px);
+    @media screen and (max-width: 450px){
+      width: 350px;
+    }
+    @media screen and (max-width: 350px){
+      width: 280px;
+    }
+
+  }
+
+  .circle:before {
+    content: "";
+    position: absolute;
+    top: $cyrclePosition;
+    left: $cyrclePosition;
+    right: $cyrclePosition;
+    bottom: $cyrclePosition;
+    border: $cyrcleBorderWidth solid #FFF;
+    border-radius: 20px;
+    box-shadow: 0 0 $cyrcleBlur #0F0,
+    inset 0 0 $cyrcleBlur #0F0;
+    animation: animate 5s linear infinite;
+  }
+
+  .circle:nth-child(2):before {
+    animation-delay: -2.5s;
+  }
+
+  @keyframes animate {
+    0% {
+      box-shadow: 0 0 $cyrcleBlur #0F0,
+      inset 0 0 $cyrcleBlur #0F0;
+      filter: hue-rotate(0deg);
+    }
+    20% {
+      box-shadow: 0 0 calc($cyrcleBlur / 1.25) #0F0,
+      inset 0 0 calc($cyrcleBlur / 1.2) #0F0;
+    }
+    40% {
+      box-shadow: 0 0 calc($cyrcleBlur / 1.25) #0F0,
+      inset 0 0 calc($cyrcleBlur * 1.6) #0F0;
+    }
+    60% {
+      box-shadow: 0 0 calc($cyrcleBlur * 1.6) #0F0,
+      inset 0 0 calc($cyrcleBlur * 1.6) #0F0;
+    }
+    80% {
+      box-shadow: 0 0 calc($cyrcleBlur * 2) #0F0,
+      inset 0 0 calc($cyrcleBlur * 2) #0F0;
+    }
+    100% {
+      box-shadow: 0 0 $cyrcleBlur #0F0,
+      inset 0 0 $cyrcleBlur #0F0;
+      filter: hue-rotate(360deg);
+    }
+  }
+
+  svg {
+    width: 0;
+    height: 0;
+  }
+}

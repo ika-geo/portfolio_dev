@@ -1,0 +1,20 @@
+.technologiesItem {
+  text-transform: uppercase;
+  background-color: black;
+  width: 150px;
+  padding: 40px 0;
+  border-top: 3px solid;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 30px;
+  word-break: break-word;
+}
+@media screen and (max-width: 450px) {
+  .technologiesItem {
+    width: 80%;
+    margin: 5px auto;
+  }
+}
+
+/*# sourceMappingURL=technologiesItem.css.map */

@@ -1,0 +1,18 @@
+.strengths__block {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+.strengths__block .title {
+  margin-bottom: 30px;
+  font-size: 38px;
+}
+.strengths__block li {
+  letter-spacing: 0.05px;
+}
+.strengths__block p {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+/*# sourceMappingURL=strengths.css.map */

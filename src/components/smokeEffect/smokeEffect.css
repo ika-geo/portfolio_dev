@@ -1,0 +1,73 @@
+.circleRing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circleRing .circleBlock {
+  position: relative;
+}
+.circleRing .circleBlock .circleText {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.circleRing .circle {
+  position: relative;
+  width: 400px;
+  filter: url(#wavy) blur(1px);
+}
+@media screen and (max-width: 450px) {
+  .circleRing .circle {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .circleRing .circle {
+    width: 280px;
+  }
+}
+.circleRing .circle:before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  bottom: 50px;
+  border: 20px solid #FFF;
+  border-radius: 20px;
+  box-shadow: 0 0 50px #0F0, inset 0 0 50px #0F0;
+  animation: animate 5s linear infinite;
+}
+.circleRing .circle:nth-child(2):before {
+  animation-delay: -2.5s;
+}
+@keyframes animate {
+  0% {
+    box-shadow: 0 0 50px #0F0, inset 0 0 50px #0F0;
+    filter: hue-rotate(0deg);
+  }
+  20% {
+    box-shadow: 0 0 40px #0F0, inset 0 0 41.6666666667px #0F0;
+  }
+  40% {
+    box-shadow: 0 0 40px #0F0, inset 0 0 80px #0F0;
+  }
+  60% {
+    box-shadow: 0 0 80px #0F0, inset 0 0 80px #0F0;
+  }
+  80% {
+    box-shadow: 0 0 100px #0F0, inset 0 0 100px #0F0;
+  }
+  100% {
+    box-shadow: 0 0 50px #0F0, inset 0 0 50px #0F0;
+    filter: hue-rotate(360deg);
+  }
+}
+.circleRing svg {
+  width: 0;
+  height: 0;
+}
+
+/*# sourceMappingURL=smokeEffect.css.map */
